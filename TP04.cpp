@@ -76,20 +76,20 @@ int main(int argc, char** argv)
 				flag = 0;
 				break;
 			case 1:
-				cout << "Qual o nome do funcion?rio?" << endl << endl;
+				cout << "Qual o nome do funcionario?" << endl << endl;
 				cin >> nometemp;
 				arrayF[counter].setNome(nometemp);
 				
 				do {
 					prontFlag = 0;
-					cout << "Qual o prontu?rio do funcion?rio?" << endl << endl;
+					cout << "Qual o prontuario do funcionario?" << endl << endl;
 					cin >> prontuariotemp;
 					
 					
 					
 					for (int i = 0; i < 100; i++) {
 							if (prontuariotemp == arrayF[i].getProntuario()) {
-								cout << "Esse prontu?rio j? est? em uso, utilize outro." << endl;
+								cout << "Esse prontuario ja esta em uso, utilize outro." << endl;
 								prontFlag = 0;
 								break;
 							}
@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 				}
 				while(prontFlag == 0);
 				
-				cout << "Qual o sal?rio do funcion?rio?" << endl << endl;
+				cout << "Qual o salario do funcionario?" << endl << endl;
 				cin >> salariotemp;
 				arrayF[counter].setSalario(salariotemp);
 				
@@ -113,7 +113,7 @@ int main(int argc, char** argv)
 				int procPront;
 				
 				
-				cout << "Digite o n?mero do prontu?rio que deseja excluir." << endl;
+				cout << "Digite o numero do prontuario que deseja excluir." << endl;
 				cin >> procPront;
 				
 				for (int cont = 0; cont < 100; cont++) {
@@ -127,7 +127,7 @@ int main(int argc, char** argv)
 					}
 					else if (cont == 99)
 					{
-						cout << "Prontu?rio n?o encontrado!" << endl;
+						cout << "Prontuario nao encontrado!" << endl;
 					}
 				}
 				
@@ -135,7 +135,7 @@ int main(int argc, char** argv)
 					
 			case 3:
 				int pesq;
-				cout << "Digite o prontu?rio do funcion?rio a ser pesquisado: " << endl;
+				cout << "Digite o prontuario do funcionario a ser pesquisado: " << endl;
 				cin >> pesq;
 				
 				for (int cont = 0; cont < 100; cont++) {
@@ -148,7 +148,7 @@ int main(int argc, char** argv)
 					}
 					else if (cont == 99)
 					{
-						cout << "Prontu?rio n?o encontrado!" << endl;
+						cout << "Prontuario Invalido!" << endl;
 					}
 				}
 				break;	
@@ -161,11 +161,12 @@ int main(int argc, char** argv)
 						cout << arrayF[cont].getNome() << endl;
 						cout << arrayF[cont].getProntuario() << endl;
 						cout << arrayF[cont].getSalario() << endl << endl;
-						break;
+						
 					}
-					else if (cont == 99)
+					else 
 					{
-						cout << "N?o h? funcion?rios para listar!" << endl;
+						cout << "Nao temos funcionarios na lista!" << endl;
+						cont = 101;
 					}
 				}
 				
