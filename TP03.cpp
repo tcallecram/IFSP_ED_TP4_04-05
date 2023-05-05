@@ -163,7 +163,6 @@ int main(int argc, char** argv)
 						cout << arrayF[cont].getProntuario() << endl;
 						cout << arrayF[cont].getSalario() << endl << endl;
 						somas = arrayF[cont].getSalario() + somas;
-						cout << "Total do salario: " << somas << endl;
 					}
 					else if (arrayF[cont].getProntuario() == 0)
 					{
@@ -171,10 +170,11 @@ int main(int argc, char** argv)
 					}
 				}
 				
-				if (teste >= 99){
+				if (teste > 99){
 					cout << "Nao temos funcionario na lista!"<<endl;
 				}
 				
+				cout << "Total do salario: " << somas << endl;
 				break;
 		}
 		counter++;
