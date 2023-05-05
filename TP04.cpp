@@ -122,7 +122,7 @@ int main(int argc, char** argv)
 						arrayF[cont].setProntuario(0);
 						arrayF[cont].setNome("");
 						arrayF[cont].setSalario(0);
-						cout << "Prontu?rio " << procPront << " apagado!" << endl;
+						cout << "Prontuario " << procPront << " apagado!" << endl;
 						break;
 					}
 					else if (cont == 99)
@@ -154,7 +154,7 @@ int main(int argc, char** argv)
 				break;	
 			
 			case 4:
-				
+				int teste = 0;
 				for (int cont = 0; cont < 100; cont++) {
 					
 					if (arrayF[cont].getProntuario() != 0) {
@@ -163,11 +163,14 @@ int main(int argc, char** argv)
 						cout << arrayF[cont].getSalario() << endl << endl;
 						
 					}
-					else 
+					else if (arrayF[cont].getProntuario() == 0)
 					{
-						cout << "Nao temos funcionarios na lista!" << endl;
-						cont = 101;
+						teste = teste + 1;
 					}
+				}
+				
+				if (teste >= 99){
+					cout << "Nao temos funcionario na lista!"<<endl;
 				}
 				
 				break;
