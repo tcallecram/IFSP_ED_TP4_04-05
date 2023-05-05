@@ -155,13 +155,15 @@ int main(int argc, char** argv)
 			
 			case 4:
 				int teste = 0;
+				double somas=0;
 				for (int cont = 0; cont < 100; cont++) {
 					
 					if (arrayF[cont].getProntuario() != 0) {
 						cout << arrayF[cont].getNome() << endl;
 						cout << arrayF[cont].getProntuario() << endl;
 						cout << arrayF[cont].getSalario() << endl << endl;
-						
+						somas = arrayF[cont].getSalario() + somas;
+						cout << "Total do salario: " << somas << endl;
 					}
 					else if (arrayF[cont].getProntuario() == 0)
 					{
